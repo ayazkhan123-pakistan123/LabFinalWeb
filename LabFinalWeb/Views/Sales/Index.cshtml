@@ -1,0 +1,57 @@
+﻿@model IEnumerable<LabFinalWeb.Models.Sales>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TyresId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransactionDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashRecieved)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TyresId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransactionDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashRecieved)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SalesId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SalesId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SalesId })
+        </td>
+    </tr>
+}
+
+</table>

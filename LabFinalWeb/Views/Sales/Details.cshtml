@@ -1,0 +1,58 @@
+﻿@model LabFinalWeb.Models.Sales
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TyresId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TyresId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransactionDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransactionDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashRecieved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashRecieved)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalesId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

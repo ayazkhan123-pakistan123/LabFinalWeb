@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Partial("_Header")
+    @RenderSection("_metatags", false)
+    @RenderSection("scripts", required: false)
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <!-- Top Menu Start -->
+    @Html.Partial("_TopMenu")
+    <!-- End of Top Menu-->
+    <!-- Banner Start -->
+    @Html.Partial("_Banner")
+    <!-- End of Banner -->
+
+
+    <div id="templatemo_content_wrapper">
+        <div id="templatemo_content">
+
+            <!-- Content Area -->
+            <div id="column_w530">
+                <div class="header_02">Welcome to our WEBSITE!</div>
+                @RenderBody()
+               <br /><br />
+                <div class="cleaner"></div>
+            </div>
+            <!-- End of Content Area -->
+            <!-- Right Sidebar -->
+            @Html.Partial("_SideBar")
+
+            <!-- End of Right Sidebar -->
+
+            <div class="cleaner"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    @Html.Partial("_Footer")
+    <!-- End of Footer -->
+
+  
+</body>
+</html>
